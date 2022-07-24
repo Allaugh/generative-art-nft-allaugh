@@ -4,16 +4,19 @@ import glob
 import json
 
 #画像生成時にできたフォルダに移動
-dir = '/Users/woo/generative-art-nft-allaugh/output/edition_7777'#自分のフォルダパスに変更(woo,edition_7777の部分を変更するパターンが多いです)
+with open('images_dir.txt') as f:
+    s = f.read()
+    dir = s
+# dir = '/Users/woo/generative-art-nft-allaugh/output/edition_11111'#最新のeditionを使わない場合は手動で設定(その場合上３行は削除)
 os.chdir(dir)
 
 #生成されたmedadata.csvを読み込み
 metadata = pd.read_csv('metadata.csv')
 
 #↓変更必要
-name = 'testname'#自分のNFTに表示する名前（ここの名前 #1のような感じで表示される）
-description = 'testdis'#NFTの説明（各自更新）
-ipfs = 'QmR3BJU3kmF9xwVK1L4inzRRSJsUmNA6NWMPTtRbqZVYWq'#pinataで画像をアップロードしたフォルダのCIDアドレスを各自記載
+name = 'Sprimal'#自分のNFTに表示する名前（ここの名前 #1のような感じで表示される）
+description = 'Sprimal is a Generative Charity NFT Collection. 20% of sales will be donated to pet protection activities.Make all of the earth laugh.'#NFTの説明（各自更新）
+ipfs = 'bafybeiapnwzj4uiokbz7xlmylir75px4gsmpc4feqzhhdtaripel5p2glq'#pinataで画像をアップロードしたフォルダのCIDアドレスを各自記載
 #↑変更必要
 
 #読み込んだmedadata.csvから１行ずつjsonで出力
@@ -25,10 +28,6 @@ for index, row in metadata.iterrows():
     "attributes":[
         
         #↓変更必要  NFTに表示したい属性を下記に記載
-        {
-            "trait_type":"TYPE",
-            "value":row['ear']
-        },
         {
             "trait_type":"OUTER",
             "value":row['cloth']
@@ -50,9 +49,23 @@ for index, row in metadata.iterrows():
             "value":row['neck']
         },
         {
+            "trait_type":"SUBITEM",
+            "value":row['subitem']
+        },
+        {
             "trait_type":"ITEM",
             "value":row['head_accessory']
         },
+        {
+            "trait_type":"TYPE",
+            "value":row['ear']
+        },
+        
+        
+        
+        
+        
+        
         #↑変更必要
         
     ]

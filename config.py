@@ -21,14 +21,16 @@
 # Be sure to check out the tutorial in the README for more details.
 
 METADATA = {
+    #thirdwebを使う場合はこちらを変更
     "name": "Sprimal",
-    "description": "Sprimal is a Generative Charity　NFT Collection. 20% of sales will be donated to pet protection activities.Make all of the earth laugh.",
+    "description": "Sprimal is a Generative Charity NFT Collection. 20% of sales will be donated to pet protection activities.Make all of the earth laugh.",
     "external_url": "https://allaughs.com/",
     "background_color": "FFFFFF",
     #    "youtube_url": ""
 }
 
 CONFIG = [
+    #ここは変更必須
     {
         "id": 1,
         "name": "background",
@@ -41,7 +43,7 @@ CONFIG = [
         "name": "body_back",
         "directory": "body_back",
         "required": True,
-        "rarity_weights": [2,2,2,2,2,2,2,2,2,2,2,100,2,2,2,2,2,2,2,2,2,2],
+        "rarity_weights": [2,2,2,2,2,2,2,2,100,2,2,2,2,2],
     },
     {
         "id": 3,
@@ -55,7 +57,7 @@ CONFIG = [
         "name": "pants",
         "directory": "pants",
         "required": True,
-        "rarity_weights": [10,10,10,10,10,100,10,10,10,10,10,10,10,10,10],
+        "rarity_weights": [10,10,10,10,10,100,10,10,10,10,10,10,10,10,10,10],
     },
     {
         "id": 5,
@@ -71,6 +73,7 @@ CONFIG = [
         "required": True,
         "rarity_weights": None,
         "link": {
+            "overall-beige.png" : "overall-beige2.png",
             "overall-black.png" : "overall-black2.png",
             "overall-blue.png" : "overall-blue2.png",
             "overall-green.png" : "overall-green2.png",
@@ -164,9 +167,54 @@ CONFIG = [
         "directory": "head_pattern2",
         "required": True,
         "rarity_weights": [2,100],
+
     },
     {
         "id": 15,
+        "name": "subitem",
+        "directory": "subitem",
+        "required": True,
+        "rarity_weights": [2,2,2,2,2,2,100,2,2,2,2,2],
+    },
+    {
+        "id": 16,
+        "name": "head_pattern3",
+        "directory": "head_pattern3",
+        "required": True,
+        "rarity_weights": None,
+        # "rarity_weights": [2,2,2,2,2,2,1000,2,2,2,2,2],
+        "link": {
+            "big-right.png" : "noneeye1.png",
+            "big.png" : "noneeye2.png",
+            "confusion.png" : "noneeye3.png",
+            "cute-right.png" : "noneeye4.png",
+            "cute-wink.png" : "noneeye5.png",
+            "disgusted.png" : "noneeye6.png",
+            "dollar.png" : "noneeye7.png",
+            "down.png" : "noneeye8.png",
+            "droopy.png" : "noneeye9.png",
+            "dull.png" : "noneeye10.png",
+            "eyelashes.png" : "noneeye11.png",
+            "glare.png" : "noneeye12.png",
+            "left.png" : "noneeye13.png",
+            "nobi.png" : "noneeye14.png",
+            "right.png" : "noneeye15.png",
+            "sleepy.png" : "noneeye16.png",
+            "smile.png" : "noneeye17.png",
+            "smirk.png" : "noneeye18.png",
+            "square.png" : "noneeye19.png",
+            "strong.png" : "noneeye20.png",
+            "up.png" : "noneeye21.png",
+            "white.png" : "noneeye22.png",
+            "wink.png" : "noneeye23.png",
+            "zombie.png" : "zombie2.png",
+
+
+            
+        },
+    },
+    {
+        "id": 17,
         "name": "ear",
         "directory": "ear",
         "required": True,
@@ -188,7 +236,7 @@ CONFIG = [
         },
     },
     {
-        "id": 16,
+        "id": 18,
         "name": "head_accessory",
         "directory": "head_accessory",
         "required": True,
@@ -198,24 +246,37 @@ CONFIG = [
             "none-bodyback01.png" : "cap-green.png",
             "none-bodyback02.png" : "cap-red.png",
             "none-bodyback03.png" : "cap-yellow.png",
-            "none-bodyback04.png" : "drool.png",
-            "none-bodyback05.png" : "eyepatch.png",
-            "none-bodyback06.png" : "foxmask-blue.png",
-            "none-bodyback07.png" : "foxmask-red.png",
-            "none-bodyback08.png" : "king.png",
-            "none-bodyback09.png" : "mask-black.png",
-            "none-bodyback10.png" : "mask-white.png",
-            "none-bodyback11.png" : "none.png",
-            "none-bodyback12.png" : "pipe.png",
-            "none-bodyback13.png" : "poo.png",
-            "none-bodyback14.png" : "queen.png",
-            "none-bodyback15.png" : "ring.png",
-            "none-bodyback16.png" : "snot-double.png",
-            "none-bodyback17.png" : "snot-long.png",
-            "none-bodyback18.png" : "snot.png",
-            "none-bodyback19.png" : "sunglass-black.png",
-            "none-bodyback20.png" : "sunglass-blue.png",
-            "none-bodyback21.png" : "tengu.png",
+            "none-bodyback04.png" : "eyepatch.png",
+            "none-bodyback05.png" : "foxmask-blue.png",
+            "none-bodyback06.png" : "foxmask-red.png",
+            "none-bodyback07.png" : "king.png",
+            "none-bodyback08.png" : "none.png",
+            "none-bodyback09.png" : "poo.png",
+            "none-bodyback10.png" : "queen.png",
+            "none-bodyback11.png" : "sunglass-black.png",
+            "none-bodyback12.png" : "sunglass-blue.png",
+            "none-bodyback13.png" : "tengu.png",
+        },
+    },
+    {
+        "id": 19,
+        "name": "subitem2",
+        "directory": "subitem2",
+        "required": True,
+        "rarity_weights": None,
+        "link": {
+            "drool.png" : "none-sub.png",
+            "mask-black.png" : "none-sub1.png",
+            "mask-blue.png" : "none-sub2.png",
+            "mask-red.png" : "none-sub3.png",
+            "mask-white.png" : "none-sub4.png",
+            "mask-yellow.png" : "none-sub5.png",
+            "none-mask.png" : "none-sub6.png",
+            "pipe.png" : "pipe2.png",
+            "ring.png" : "none-sub7.png",
+            "snot-double.png" : "none-sub8.png",
+            "snot-long.png" : "none-sub9.png",
+            "snot.png" : "none-sub10.png",
         },
     },
 ]

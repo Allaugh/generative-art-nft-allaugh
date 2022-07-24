@@ -212,13 +212,15 @@ def generate_images(edition: str, count: int) -> DataFrame:
     for idx, img in enumerate(sorted(os.listdir(op_path))):
         os.rename(
             os.path.join(op_path, img),
-            os.path.join(op_path, str(idx+1).zfill(zfill_count) + ".png"),
+            os.path.join(op_path, str(idx+1) + ".png"),
         )
 
     # Modify rarity table to reflect removals
     rarity_table = rarity_table.reset_index()
     rarity_table = rarity_table.drop("index", axis=1)
     return rarity_table
+
+
 
 
 def generate_metadata(rarity_table: DataFrame, edition_name: str):
@@ -248,6 +250,11 @@ def generate_metadata(rarity_table: DataFrame, edition_name: str):
         os.path.join("output", "edition_" + str(edition_name), "metadata.csv"),
         index=False,
     )
+def generate_images_dir(edition_name:str):
+    path_w = 'images_dir.txt'
+    s = os.getcwd() + '/output/edition_' + edition_name
+    with open(path_w, mode='w') as f:
+        f.write(s)
 
 
 # Main function. Point of entry
@@ -272,6 +279,7 @@ def main():
     print("Starting task...")
     rt = generate_images(edition_name, num_avatars)
     generate_metadata(rt, edition_name)
+    generate_images_dir(edition_name)
 
     print("Saving metadata...")
 
