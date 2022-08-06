@@ -1237,9 +1237,9 @@ contract Sprimal is ERC721Enumerable, Ownable {
 
   string baseURI;
   string public baseExtension = ".json";
-  uint256 public cost = 0.02 ether;
-  uint256 public maxSupply = 7777;
-  uint256 public maxMintAmount = 7777;
+  uint256 public cost = 5 ether;
+  uint256 public maxSupply = 11111;
+  uint256 public maxMintAmount = 11111;
   bool public paused = false;
   bool public revealed = true;
   string public notRevealedUri;
@@ -1252,7 +1252,6 @@ contract Sprimal is ERC721Enumerable, Ownable {
   ) ERC721(_name, _symbol) {
     setBaseURI(_initBaseURI);
     setNotRevealedURI(_initNotRevealedUri);
-    mint(maxSupply);
   }
 
   // internal
@@ -1342,14 +1341,7 @@ contract Sprimal is ERC721Enumerable, Ownable {
   }
  
   function withdraw() public payable onlyOwner {
-    // This will pay Allaugh 5% of the initial sale.
-    // You can remove this if you want, or keep it in to support Allaugh and his channel.
-    // =============================================================================
-    (bool hs, ) = payable(0xd14AE99A9B6758893bd281Fb49dB715Aca807Fca).call{value: address(this).balance * 5 / 100}("");
-    require(hs);
-    // =============================================================================
-    
-    // This will payout the owner 95% of the contract balance.
+    // This will payout the owner the contract balance.
     // Do not remove this otherwise you will not be able to withdraw the funds.
     // =============================================================================
     (bool os, ) = payable(owner()).call{value: address(this).balance}("");

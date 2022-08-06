@@ -37,7 +37,7 @@ Upload NFT metadatas(.json) on pinata.
 This project is forked from Scrappy Squirrels. Scrappy Squirrels have good Document. Check it out [here](https://medium.com/scrappy-squirrels/tutorial-create-generative-nft-art-with-rarities-8ee6ce843133)
 
 The following features have been added to this program.
-- The output metadata is now compatible with [HashLips](https://github.com/HashLips/hashlips_nft_contract) and [ThirdWeb](https://thirdweb.com/).
+- The output metadata is now compatible with [HashLips](https://github.com/HashLips/hashlips_nft_contract) and [ThirdWeb](https://thirdweb.com/) etc.
 - Added support for one-to-one parts, such as front hair and back hair.
 - Added DockerFile, .gitignore, etc.
 
@@ -47,6 +47,6 @@ The following features have been added to this program.
 
 This library was created as part of the Allaugh DAO project "Sprimal".
 
-Sprimal is a collection of 7,777 randomly generated NFTs. Allaugh DAO is a charity project that makes all of the world laugh with NFT.
+Sprimal is a collection of 11,111 randomly generated NFTs. Allaugh DAO is a charity project that makes all of the world laugh with NFT.
 
 The community is Built by Allaugh. Allaugh is charity DAO community.
